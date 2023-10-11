@@ -3,6 +3,7 @@ import { useMultistepForm } from "./ useMultistepForm"
 import { PersonalForm } from "./Personal"
 import { ContactsForm } from "./contact"
 import { QualificationForm } from "./Qualification"
+import { EmploymentForm } from "./Employement"
 
 type FormData = {
   firstName: string,
@@ -22,6 +23,10 @@ type FormData = {
   qualification: string,
   linkedin: string,
   github: string,
+  company: string,
+  position: string,
+  term: string,
+  responsibilities: string,
 
 }
 
@@ -43,6 +48,10 @@ const INITIAL_DATA: FormData = {
   qualification: "", 
   linkedin: "", 
   github: "",
+  company: "",
+  position: "",
+  term: "",
+  responsibilities: "",
 }
 
 
@@ -61,7 +70,7 @@ function App() {
     <PersonalForm {...data} updateFields={updateFields} />,
     <ContactsForm  {...data} updateFields={updateFields} />,
     <QualificationForm {...data} updateFields={updateFields} />,
-    // <QualificationForm {...data} updateFields={updateFields} />,
+    <EmploymentForm {...data} updateFields={updateFields} />,
   ])
 
   function onSubmit(e: FormEvent) {
