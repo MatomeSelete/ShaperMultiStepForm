@@ -17,7 +17,7 @@ type ContactsFormProps = ContactsData & {
 
 export function ContactsForm({email, phone, town, province, updateFields, }: ContactsFormProps) {
     return (
-    <FormWrapper title="User Account">
+    <FormWrapper title="Contact Info">
     <label> Email </label>
     <input
         autoFocus 

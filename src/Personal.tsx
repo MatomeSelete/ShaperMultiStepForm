@@ -26,7 +26,7 @@ export function PersonalForm(
     updateFields, 
 }: PersonalFormProps ) {
     return (
-        <FormWrapper title="User details">
+        <FormWrapper title="Personal Info">
         <label> First name </label>
         <input 
         autoFocus 

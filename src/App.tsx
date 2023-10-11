@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react"
 import { useMultistepForm } from "./ useMultistepForm"
 import { PersonalForm } from "./Personal"
 import { ContactsForm } from "./contact"
+import { QualificationForm } from "./Qualification"
 
 type FormData = {
   firstName: string,
@@ -18,6 +19,9 @@ type FormData = {
   phone: string,
   town: string,
   province: string,
+  qualification: string,
+  linkedin: string,
+  github: string,
 
 }
 
@@ -36,6 +40,9 @@ const INITIAL_DATA: FormData = {
   phone: "",
   town: "",
   province: "",
+  qualification: "", 
+  linkedin: "", 
+  github: "",
 }
 
 
@@ -53,7 +60,8 @@ function App() {
     useMultistepForm([
     <PersonalForm {...data} updateFields={updateFields} />,
     <ContactsForm  {...data} updateFields={updateFields} />,
-    // <AccountForm {...data} updateFields={updateFields} />,
+    <QualificationForm {...data} updateFields={updateFields} />,
+    // <QualificationForm {...data} updateFields={updateFields} />,
   ])
 
   function onSubmit(e: FormEvent) {
