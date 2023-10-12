@@ -1,4 +1,5 @@
 import { FormWrapper } from "./Formwrapper";
+import Personal from "../public/personal.avif"
 
 type PersonalData = {
     firstName: string 
@@ -70,6 +71,11 @@ export function PersonalForm(
         value={gender} 
         onChange={e => updateFields({gender: e.target.value})}
         />
+
+{/* <div className="Illustrations">
+        <img src={Personal} alt="personal" style={{height: "80vh", width: "100%", borderRadius: ".5rem"}}/>
+
+      </div>  */}
 
         </FormWrapper>
     )

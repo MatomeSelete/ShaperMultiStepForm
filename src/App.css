@@ -12,11 +12,21 @@
     font-family: Arial; 
 }
 
-
-form {
+.formDiv {
+    background-color: orange;
     width: 60%;
     border-radius: .5rem;
-    /* margin-top: 10%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+form {
+    background-color: red;
+    margin: auto;
+    width: 95%;
+    border-radius: .5rem;
+    margin-top: 20%;
 }
 
 .formIllustrations {
@@ -26,11 +36,13 @@ form {
 }
 
 .Illustrations {
-    
-    width: 35%;
+    background-color: green;
+    width: 40%;
 }
 
 svg {
-    width: 60%;
+    width: 95%;
     height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
 }
