@@ -99,19 +99,19 @@ function App() {
         </div>
         {step}
         <div style={{
-          marginTop: "1rem",
+           marginTop: "1rem",
           display: "flex",
           gap: ".5rem",
-          justifyContent: "flex-end",
+          justifyContent: "flex-start",
         }}
         >
           {isFirstStep && (
-            <button type="button" onClick={back}>
+            <button className="backBtn" type="button" onClick={back}>
               Back
             </button>
           )}
   
-          <button type="submit">
+          <button className="nextBtn" type="submit">
             {isLastStep ? "Finish" : "Next"}
           </button>
   

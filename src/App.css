@@ -1,42 +1,49 @@
 .appHome {
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
     width: 80%;
     height: 80vh;
     border-radius: .5rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
     font-family: Arial; 
 }
 
+title {
+    font-size: larger;
+    font-size: 70px;
+}
+
 .formDiv {
-    background-color: orange;
+    background-color: rgba(238, 238, 238, 0.39);
     width: 60%;
     border-radius: .5rem;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid red;
 }
 
-
 form {
-    background-color: red;
     margin: auto;
     width: 95%;
     border-radius: .5rem;
     margin-top: 20%;
+    
 }
 
 .formIllustrations {
     display: flex;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
 
 }
 
+
 .Illustrations {
-    background-color: green;
+    /* background-color: green; */
     width: 40%;
 }
 
@@ -46,3 +53,15 @@ svg {
     margin-left: auto;
     margin-right: auto;
 }
+
+.nextBtn,
+.backBtn {
+    background-color: black;
+    color: white;
+    width: 90px;
+    border-radius: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .nextBtn  */
