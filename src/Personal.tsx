@@ -1,5 +1,5 @@
 import { FormWrapper } from "./Formwrapper";
-import Personal from "../public/personal.avif"
+// import Personal from "../public/personal.avif"
 
 import "./Personal.css";
 
@@ -31,7 +31,11 @@ export function PersonalForm(
     return (
         <>
         {/* <div className="personalForm"> */}
-            <FormWrapper title="Personal Info">
+            <FormWrapper title="Personal Info ">
+
+
+                <div className="names">
+                <div className="firstname">
                 <label> First name </label>
                 <input
                     autoFocus
@@ -39,12 +43,19 @@ export function PersonalForm(
                     type='text'
                     value={firstName}
                     onChange={e => updateFields({ firstName: e.target.value })} />
+                
+                </div>
+
+                <div className="lastName">
                 <label> Last name </label>
                 <input
                     required
                     type='text'
                     value={lastName}
                     onChange={e => updateFields({ lastName: e.target.value })} />
+                </div>
+                </div>
+
                 <label> ID </label>
                 <input
                     required min={1}
@@ -69,6 +80,8 @@ export function PersonalForm(
                     type='text'
                     value={gender}
                     onChange={e => updateFields({ gender: e.target.value })} />
+                    
+
 
             </FormWrapper>
             
@@ -82,3 +95,22 @@ export function PersonalForm(
     )
 
 }
+
+
+
+<form>
+  <div className="mb-3">
+    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div className="mb-3">
+    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+    <input type="password" className="form-control" id="exampleInputPassword1" />
+  </div>
+  <div className="mb-3 form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" className="btn btn-primary">Submit</button>
+</form>

@@ -120,7 +120,7 @@ function App() {
       </div>
       
       <div className="Illustrations">
-        <img src={Personal} alt="personal" style={{height: "80vh", width: "100%", borderRadius: ".5rem"}}/>
+        <img src={Personal} alt="personal" style={{height: "77vh", width: "99%", borderRadius: ".5rem"}}/>
 
       </div> 
 
