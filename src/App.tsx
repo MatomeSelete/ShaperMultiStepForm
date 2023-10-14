@@ -4,6 +4,7 @@ import { PersonalForm } from "./Personal"
 import { ContactsForm } from "./contact"
 import { QualificationForm } from "./Qualification"
 import { EmploymentForm } from "./Employement"
+import { EmploymentAddForm } from "./EmployementAdd"
 
 import Personal from "../public/personal.avif"
 
@@ -74,6 +75,7 @@ function App() {
     <ContactsForm  {...data} updateFields={updateFields} />,
     <QualificationForm {...data} updateFields={updateFields} />,
     <EmploymentForm {...data} updateFields={updateFields} />,
+    <EmploymentAddForm {...data} updateFields={updateFields} />,
   ])
 
   function onSubmit(e: FormEvent) {
@@ -88,9 +90,9 @@ function App() {
       <div className="formDiv">
       <form onSubmit={onSubmit} >
         <div style={{
-          position: "absolute",
-          top: ".5rem",
-          right: ".5rem",
+          // position: "absolute",
+          // top: ".5rem",
+          // right: ".5rem",
   
         }}
         >
@@ -99,10 +101,10 @@ function App() {
         </div>
         {step}
         <div style={{
-           marginTop: "1rem",
-          display: "flex",
-          gap: ".5rem",
-          justifyContent: "flex-start",
+          //  marginTop: "1rem",
+          // display: "flex",
+          // gap: ".5rem",
+          // justifyContent: "flex-start",
         }}
         >
           {isFirstStep && (

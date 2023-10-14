@@ -1,6 +1,6 @@
 import { FormWrapper } from "./Formwrapper";
 
-type EmploymentData = {
+type EmploymentAddData = {
     company: string 
     position: string 
     term: string
@@ -8,11 +8,11 @@ type EmploymentData = {
    
 }
 
-type EmploymentFormProps = EmploymentData & {
-    updateFields: (fields: Partial<EmploymentData> ) => void
+type EmploymentAddFormProps = EmploymentAddData & {
+    updateFields: (fields: Partial<EmploymentAddData> ) => void
 }
 
-export function EmploymentForm( 
+export function EmploymentAddForm( 
     {
     company, 
     position, 
@@ -22,9 +22,9 @@ export function EmploymentForm(
 
 
     updateFields, 
-}: EmploymentFormProps ) {
+}: EmploymentAddFormProps ) {
     return (
-        <><FormWrapper title="Employment history">
+        <><FormWrapper title="Add employment history">
             <label> Company name </label>
             <input
                 autoFocus
@@ -49,12 +49,7 @@ export function EmploymentForm(
                 required min={1}
                 type='text'
                 value={responsibilities}
-                onChange={e => updateFields({ responsibilities: e.target.value })} 
-            />
-
-            <button> Add more </button>
-
-
+                onChange={e => updateFields({ responsibilities: e.target.value })} />
 
         </FormWrapper>
         </>
