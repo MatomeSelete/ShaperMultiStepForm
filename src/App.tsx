@@ -28,26 +28,14 @@ type FormData = {
   qualification: string,
   linkedin: string,
   github: string,
-  company: string,
-  position: string,
-  term: string,
-  responsibilities: string,
-
-  Employment: [
+  workHistory: [
     {
-      company: "",
-      position: "",
-      term: "",
-      responsibilities: "",
+      company: string,
+      position: string,
+      term: string,
+      responsibilities: string,
     }, 
-     {
-      company: "",
-      position: "",
-      term: "",
-      responsibilities: "",
-    },
-
-  ]
+     ]
 }
 
 const INITIAL_DATA: FormData = {
@@ -68,10 +56,19 @@ const INITIAL_DATA: FormData = {
   qualification: "", 
   linkedin: "", 
   github: "",
-  company: "",
-  position: "",
-  term: "",
-  responsibilities: "",
+  // company: "",
+  // position: "",
+  // term: "",
+  // responsibilities: "",
+
+  workHistory: [
+    {
+      company: "",
+      position: "",
+      term: "",
+      responsibilities: "",
+    }, 
+  ]
   
 }
 
@@ -92,7 +89,7 @@ function App() {
     <ContactsForm  {...data} updateFields={updateFields} />,
     <QualificationForm {...data} updateFields={updateFields} />,
     <EmploymentForm {...data} updateFields={updateFields} />,
-    <EmploymentAddForm {...data} updateFields={updateFields} />,
+    // <EmploymentAddForm {...data} updateFields={updateFields} />,
   ])
 
   function onSubmit(e: FormEvent) {
