@@ -1,15 +1,31 @@
 input {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    /* border: none; */
-    margin-bottom: 3%;
-   
-
 }
 
-label {
-
+input, label {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
 }
+
+input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* ===================== Small devices (portrait tablets and large phones, 600px and up) ========================= */
+
+@media only screen and (min-width: 768px) {
+
+
+
+  input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
 
 input, label {
     display: flex;
@@ -22,16 +38,17 @@ input, label {
     display: flex;
     justify-content: space-evenly;
     height: 10vh;
-    width: 80%;
-    margin-left: 10%;
-    /* border: 1px solid red; */
+    width: 75%;
+    margin-left: 13%;
 }
 
 
 .firstname input, .lastName input {
-    width: 100%;
+    width: 97%;
 }
 
 .firstname label, .lastName label {
     width: 100%;
+}  
+
 }

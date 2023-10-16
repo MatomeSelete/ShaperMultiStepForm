@@ -1,3 +1,4 @@
+
 .appHome {
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -7,7 +8,82 @@
     width: 80%;
     height: 80vh;
     border-radius: .5rem;
-    /* border: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    font-family: Arial; 
+}
+
+title {
+    font-size: larger;
+    font-size: 70px;
+}
+
+
+
+.Illustrations {
+    display: none;
+    width: 40%;
+}
+
+/* .formDiv {
+    width: 60%;
+    border-radius: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+form {
+    margin: auto;
+    width: 95%;
+    border-radius: .5rem;
+    margin-top: 10%;
+    
+}
+
+/* .formIllustrations {
+    display: none;
+} */
+
+
+/* svg {
+    width: 95%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.nextBtn,
+.backBtn {
+    background-color: black;
+    color: white;
+    width: 100px;
+    border-radius: .5rem;
+    margin-top: 3%;
+    margin-left: 20%;
+}
+
+/* .backNextBtn {
+    border: 1px solid red;
+    display: flex;
+    width: 70%;
+    margin-left: 5%;
+
+} */
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+ .appHome {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    border-radius: .5rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
     font-family: Arial; 
@@ -19,12 +95,10 @@ title {
 }
 
 .formDiv {
-    /* background-color: rgba(238, 238, 238, 0.39); */
     width: 60%;
     border-radius: .5rem;
     margin-left: auto;
     margin-right: auto;
-    /* border: 1px solid red; */
 }
 
 form {
@@ -37,13 +111,11 @@ form {
 
 .formIllustrations {
     display: flex;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
-
 }
 
 
 .Illustrations {
-    /* background-color: green; */
+    display: flex;
     width: 40%;
 }
 
@@ -64,7 +136,6 @@ svg {
     margin-left: 20%;
 }
 
-.names {
 
+  
 }
- 

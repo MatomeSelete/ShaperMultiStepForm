@@ -29,7 +29,7 @@ export function ContactsForm({email, phone, town, province, updateFields, }: Con
     <label> Phone Number </label>
     <input 
         required 
-        type='number' 
+        type='tel' 
         value={phone} 
         onChange={e => updateFields({phone: e.target.value})} 
     />

@@ -56,6 +56,7 @@ const INITIAL_DATA: FormData = {
   position: "",
   term: "",
   responsibilities: "",
+  
 }
 
 
@@ -89,10 +90,8 @@ function App() {
       <div className="formIllustrations">
       <div className="formDiv">
       <form onSubmit={onSubmit} >
-        <div style={{
-          // position: "absolute",
-          // top: ".5rem",
-          // right: ".5rem",
+        <div className="pageCounter" style={{
+          
   
         }}
         >
@@ -100,11 +99,11 @@ function App() {
   
         </div>
         {step}
-        <div style={{
+        <div className="backNextBtn" style={{
           //  marginTop: "1rem",
           // display: "flex",
           // gap: ".5rem",
-          // justifyContent: "flex-start",
+          // justifyContent: "center",
         }}
         >
           {isFirstStep && (
