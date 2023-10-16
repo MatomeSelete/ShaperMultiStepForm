@@ -32,6 +32,22 @@ type FormData = {
   position: string,
   term: string,
   responsibilities: string,
+
+  Employment: [
+    {
+      company: "",
+      position: "",
+      term: "",
+      responsibilities: "",
+    }, 
+     {
+      company: "",
+      position: "",
+      term: "",
+      responsibilities: "",
+    },
+
+  ]
 }
 
 const INITIAL_DATA: FormData = {
@@ -90,22 +106,12 @@ function App() {
       <div className="formIllustrations">
       <div className="formDiv">
       <form onSubmit={onSubmit} >
-        <div className="pageCounter" style={{
-          
-  
-        }}
-        >
+        <div className="pageCounter" >
           {currentSteperIndex + 1} / {steps.length}
   
         </div>
         {step}
-        <div className="backNextBtn" style={{
-          //  marginTop: "1rem",
-          // display: "flex",
-          // gap: ".5rem",
-          // justifyContent: "center",
-        }}
-        >
+        <div className="backNextBtn" >
           {isFirstStep && (
             <button className="backBtn" type="button" onClick={back}>
               Back

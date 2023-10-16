@@ -20,7 +20,7 @@ export function QualificationForm(
 }: QualificationFormProps ) {
     return (
         <FormWrapper title="Qualification and Portfolio">
-        <label> Heighest Qualification </label>
+        <label> Highest Qualification </label>
         <input 
         autoFocus 
         required 

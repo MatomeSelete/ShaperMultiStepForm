@@ -29,7 +29,8 @@ export function ContactsForm({email, phone, town, province, updateFields, }: Con
     <label> Phone Number </label>
     <input 
         required 
-        type='tel' 
+        max={10}
+        type='number' 
         value={phone} 
         onChange={e => updateFields({phone: e.target.value})} 
     />

@@ -1,5 +1,4 @@
 import { FormWrapper } from "./Formwrapper";
-import $ from "jquery";
 // import Personal from "../public/personal.avif"
 
 import "./Personal.css";
@@ -62,13 +61,14 @@ export function PersonalForm(
 
                 <label> ID </label>
                 <input
-                required max={12345678}
+                    required 
+                    max={23}
                     type='number'
                     value={Id}
                     onChange={e => updateFields({ Id: e.target.value })} />
                 <label> Age </label>
                 <input
-                    required max={2}
+                    required max={35}
                     type='number'
                     value={age}
                     onChange={e => updateFields({ age: e.target.value })} />
@@ -89,12 +89,6 @@ export function PersonalForm(
 
             </FormWrapper>
             
-            {/* <div className="Illustrations">
-                <img src={Personal} alt="personal" style={{ height: "80vh", width: "100%", borderRadius: ".5rem" }} />
-
-            </div> */}
-            {/* </div> */}
-        
         </>
     )
 
