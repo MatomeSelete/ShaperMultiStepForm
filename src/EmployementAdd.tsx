@@ -19,8 +19,6 @@ export function EmploymentAddForm(
     // term,
     // responsibilities,
     
-
-
     updateFields, 
 }: EmploymentAddFormProps ) {
     return (

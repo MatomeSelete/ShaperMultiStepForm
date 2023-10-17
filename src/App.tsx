@@ -1,14 +1,23 @@
-import { FormEvent, useState } from "react"
-import { useMultistepForm } from "./ useMultistepForm"
-import { PersonalForm } from "./Personal"
-import { ContactsForm } from "./contact"
-import { QualificationForm } from "./Qualification"
-import { EmploymentForm } from "./Employement"
-import { EmploymentAddForm } from "./EmployementAdd"
+import { FormEvent, useState } from "react";
+import { useMultistepForm } from "./ useMultistepForm";
+import { PersonalForm } from "./Personal";
+import { ContactsForm } from "./contact";
+import { QualificationForm } from "./Qualification";
+import { EmploymentForm } from "./Employment";
+
+
+
 
 import Personal from "../public/personal.avif"
-
 import "./App.css";
+
+type WorkHistoryItem = {
+  company: string;
+  position: string; 
+  term: string;
+  responsibilities: string;
+};
+
 
 type FormData = {
   firstName: string,
@@ -17,10 +26,6 @@ type FormData = {
   age: string,
   race: string,
   gender: string,
-  street: string,
-  city: string,
-  state: string,
-  zip: string,
   email: string,
   phone: string,
   town: string,
@@ -28,14 +33,8 @@ type FormData = {
   qualification: string,
   linkedin: string,
   github: string,
-  workHistory: [
-    {
-      company: string,
-      position: string,
-      term: string,
-      responsibilities: string,
-    }, 
-     ]
+  workHistory: WorkHistoryItem[]; // Define workHistory as an array of objects
+     
 }
 
 const INITIAL_DATA: FormData = {
@@ -45,10 +44,6 @@ const INITIAL_DATA: FormData = {
   age: "",
   gender: "",
   race: "",
-  street: "",
-  city: "",
-  state: "",
-  zip: "",
   email: "",
   phone: "",
   town: "",
@@ -56,19 +51,7 @@ const INITIAL_DATA: FormData = {
   qualification: "", 
   linkedin: "", 
   github: "",
-  // company: "",
-  // position: "",
-  // term: "",
-  // responsibilities: "",
-
-  workHistory: [
-    {
-      company: "",
-      position: "",
-      term: "",
-      responsibilities: "",
-    }, 
-  ]
+  workHistory: [], // Initialize workHistory as an empty array
   
 }
 
@@ -88,8 +71,7 @@ function App() {
     <PersonalForm {...data} updateFields={updateFields} />,
     <ContactsForm  {...data} updateFields={updateFields} />,
     <QualificationForm {...data} updateFields={updateFields} />,
-    <EmploymentForm {...data} updateFields={updateFields} />,
-    // <EmploymentAddForm {...data} updateFields={updateFields} />,
+    <EmploymentForm {...data} updateFields={updateFields} />, 
   ])
 
   function onSubmit(e: FormEvent) {
