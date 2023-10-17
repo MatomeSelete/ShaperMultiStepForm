@@ -1,15 +1,11 @@
 import { FormWrapper } from "./Formwrapper";
 
-
-
 type  ContactsData = {
     email: string 
     phone: string
     town: string
     province: string
 }
-
-
 
 type ContactsFormProps = ContactsData & {
     updateFields: (fields: Partial<ContactsData> ) => void
@@ -29,9 +25,9 @@ export function ContactsForm({email, phone, town, province, updateFields, }: Con
     <label> Phone Number </label>
     <input 
         required 
-        max={10}
-        type='number' 
+        type='tel' 
         value={phone} 
+        pattern="[+]{1}[0-9]{11,14}"
         onChange={e => updateFields({phone: e.target.value})} 
     />
     <label> Town/City </label>

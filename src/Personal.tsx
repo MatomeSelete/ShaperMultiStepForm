@@ -1,5 +1,5 @@
 import { FormWrapper } from "./Formwrapper";
-// import Personal from "../public/personal.avif"
+import React, { useState } from "react";
 
 import "./Personal.css";
 
@@ -28,7 +28,16 @@ export function PersonalForm(
 
     updateFields, 
 }: PersonalFormProps ) {
+    const [idValidationMessage, setIdValidationMessage] = useState<string>("");
 
+    function validateID(id: string) {
+      const regex = /^[0-9]{13}$/; // Adjust the regex pattern according to your requirements
+      if (regex.test(id)) {
+        setIdValidationMessage("");
+      } else {
+        setIdValidationMessage("Please supply a valid 12-digit ID number");
+      }
+    }
    
 
     return (
@@ -62,10 +71,16 @@ export function PersonalForm(
                 <label> ID </label>
                 <input
                     required 
-                    max={23}
-                    type='number'
+                    type="text" // Consider using type="text" for ID input
+                    pattern="[0-9]{13}" // Use pattern attribute for custom validation
                     value={Id}
-                    onChange={e => updateFields({ Id: e.target.value })} />
+                    onChange={(e) => {
+                        const newValue = e.target.value;
+                        updateFields({ Id: newValue });
+                        validateID(newValue);
+                      }}
+                    />
+                    <p className="validation-message">{idValidationMessage}</p>
                 <label> Age </label>
                 <input
                     required max={35}
@@ -93,3 +108,5 @@ export function PersonalForm(
     )
 
 }
+
+
