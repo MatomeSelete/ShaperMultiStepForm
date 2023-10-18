@@ -52,3 +52,58 @@ input, label {
 }  
 
 }
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)  {
+
+    .names {
+        display: flex;
+        justify-content: space-evenly;
+        height: 10vh;
+        width: 62%;
+        margin-left: 19%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)  {
+
+    /* .names {
+        display: flex;
+        justify-content: space-evenly;
+        height: 5vh;
+        width: 100%;
+        margin-left: 3.5%;
+        border: 2px solid red;
+    }
+
+    .firstname input, .lastName input {
+        /* width: 50%; 
+    } */
+
+}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {
+
+    .names {
+        display: flex;
+        justify-content: space-evenly;
+        height: 5vh;
+        width: 80%;
+        margin-left: 3.5%;
+    }
+
+    .firstname input, .lastName input {
+        width: 185%;
+    }
+
+}

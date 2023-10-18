@@ -1,10 +1,10 @@
 import { FormWrapper } from "./Formwrapper";
 
 type EmploymentAddData = {
-    // company: string 
-    // position: string 
-    // term: string
-    // responsibilities: string
+    company: string 
+    position: string 
+    term: string
+    responsibilities: string
    
 }
 
@@ -14,10 +14,10 @@ type EmploymentAddFormProps = EmploymentAddData & {
 
 export function EmploymentAddForm( 
     {
-    // company, 
-    // position, 
-    // term,
-    // responsibilities,
+    company, 
+    position, 
+    term,
+    responsibilities,
     
     updateFields, 
 }: EmploymentAddFormProps ) {
@@ -29,29 +29,29 @@ export function EmploymentAddForm(
                 autoFocus
                 required
                 type='text'
-                // value={company}
-                // onChange={e => updateFields({ company: e.target.value })} 
+                value={company}
+                onChange={e => updateFields({ company: e.target.value })} 
                 />
             <label> Position </label>
             <input
                 required
                 type='text'
-                // value={position}
-                // onChange={e => updateFields({ position: e.target.value })} 
+                value={position}
+                onChange={e => updateFields({ position: e.target.value })} 
                 />
             <label> Term of Employment </label>
             <input
                 required min={1}
                 type='text'
-                // value={term}
-                // onChange={e => updateFields({ term: e.target.value })} 
+                value={term}
+                onChange={e => updateFields({ term: e.target.value })} 
                 />
             <label> Key Responsibilities </label>
             <input
                 required min={1}
                 type='text'
-                // value={responsibilities}
-                // onChange={e => updateFields({ responsibilities: e.target.value })} 
+                value={responsibilities}
+                onChange={e => updateFields({ responsibilities: e.target.value })} 
                 />
 
         </FormWrapper>
